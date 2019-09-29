@@ -1,24 +1,27 @@
+let id = 1
+const proximoId = () => id ++
+
 const perfis = [
     { id: 1, nome: 'comum' },
     { id: 2, nome: 'administrador' }
 ]
 
 const usuarios = [{
-    id: 1,
+    id: proximoId(),
     nome: 'João Silva',
     email: 'jsilva@zemail.com',
     idade: 29,
     perfil_id: 1,
     status: 'ATIVO'
 }, {
-    id: 2,
+    id: proximoId(),
     nome: 'Rafael Junior',
     email: 'rafajun@wemail.com',
     idade: 31,
     perfil_id: 2,
     status: 'INATIVO'
 }, {
-    id: 3,
+    id: proximoId(),
     nome: 'Daniela Smith',
     email: 'danismi@umail.com',
     idade: 24,
@@ -26,4 +29,8 @@ const usuarios = [{
     status: 'BLOQUEADO'
 }]
 
-module.exports = { usuarios, perfis }
+module.exports = {
+    usuarios,
+    perfis,
+    proximoId
+}
